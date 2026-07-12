@@ -239,3 +239,21 @@ button { cursor: pointer; }
   .footer-bottom { flex-direction: column; }
   .floating-whatsapp { right: 12px; bottom: 12px; }
 }
+/* Fix hero buttons on iPhone/mobile */
+.hero-glow,
+.floating-card::before {
+  pointer-events: none;
+}
+
+.hero-grid,
+.hero-copy,
+.hero-actions,
+.hero-actions a {
+  position: relative;
+  z-index: 5;
+}
+
+.hero-actions a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
